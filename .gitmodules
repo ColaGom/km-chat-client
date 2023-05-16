@@ -1,0 +1,3 @@
+[submodule "km-chat-common"]
+	path = km-chat-common
+	url = https://github.com/ColaGom/km-chat-common
