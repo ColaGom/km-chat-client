@@ -35,6 +35,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import io.colagom.chat.dto.ChatRoom
+import io.colagom.common.PLATFORM
 import io.colagom.store.ChatRoomListAction
 import io.colagom.store.ChatRoomListEvent
 import io.colagom.store.ChatRoomListStore
@@ -56,7 +57,7 @@ fun ChatRoomListScreen(
                 topBar = {
                     TopAppBar(title = {
                         Box(modifier = Modifier.fillMaxWidth()) {
-                            Text(modifier = Modifier.align(Alignment.Center), text = "KM - Chat")
+                            Text(modifier = Modifier.align(Alignment.Center), text = "KM - Chat($PLATFORM)")
                             IconButton(
                                 modifier = Modifier.align(Alignment.CenterEnd),
                                 onClick = { visible = true },

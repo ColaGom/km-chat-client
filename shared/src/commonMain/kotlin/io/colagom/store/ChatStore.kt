@@ -1,9 +1,9 @@
 package io.colagom.store
 
 import io.colagom.chat.dto.ChatMessage
-import io.colagom.chat.dto.ChatRequest
 import io.colagom.chat.dto.ChatRoom
-import io.colagom.chat.dto.ChatType
+import io.colagom.chat.dto.request.ChatType
+import io.colagom.chat.dto.request.SendChat
 import io.colagom.common.Http
 import io.colagom.usecase.GetChatRoomUseCase
 import io.ktor.client.plugins.websocket.ws
@@ -84,7 +84,7 @@ class ChatStore(
             is ChatAction.ClickInput -> {
                 val joined = _state.value.joined
                 launch {
-                    val message = ChatRequest(
+                    val message = SendChat(
                         type = if (joined) ChatType.MESSAGE else ChatType.JOIN,
                         message = action.input
                     )

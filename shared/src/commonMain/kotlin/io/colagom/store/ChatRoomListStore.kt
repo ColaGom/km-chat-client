@@ -1,7 +1,7 @@
 package io.colagom.store
 
 import io.colagom.chat.dto.ChatRoom
-import io.colagom.chat.dto.CreateChatRoom
+import io.colagom.chat.dto.request.CreateChatRoom
 import io.colagom.usecase.CreateChatRoomUseCase
 import io.colagom.usecase.GetAllChatRoomUseCase
 import kotlinx.coroutines.CoroutineScope

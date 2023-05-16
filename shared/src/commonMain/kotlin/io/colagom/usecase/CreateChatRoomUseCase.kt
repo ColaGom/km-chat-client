@@ -1,7 +1,7 @@
 package io.colagom.usecase
 
 import io.colagom.chat.dto.ChatRoom
-import io.colagom.chat.dto.CreateChatRoom
+import io.colagom.chat.dto.request.CreateChatRoom
 import io.colagom.common.Http
 import io.ktor.client.call.body
 import io.ktor.client.request.post
