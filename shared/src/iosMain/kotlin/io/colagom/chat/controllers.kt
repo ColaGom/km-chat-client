@@ -1,7 +1,7 @@
 package io.colagom.chat
 
 import androidx.compose.ui.window.ComposeUIViewController
-import io.colagom.chat.dto.ChatRoom
+import io.colagom.chat.model.ChatRoom
 import io.colagom.ui.ChatRoomListScreen
 import io.colagom.ui.ChatScreen
 import platform.UIKit.UIViewController

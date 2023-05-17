@@ -1,9 +1,9 @@
 package io.colagom.store
 
-import io.colagom.chat.dto.ChatMessage
-import io.colagom.chat.dto.ChatRoom
-import io.colagom.chat.dto.request.ChatType
-import io.colagom.chat.dto.request.SendChat
+import io.colagom.chat.model.ChatMessage
+import io.colagom.chat.model.ChatRoom
+import io.colagom.chat.model.request.ChatType
+import io.colagom.chat.model.request.SendChat
 import io.colagom.common.Http
 import io.colagom.usecase.UseCases
 import io.ktor.client.plugins.websocket.ws

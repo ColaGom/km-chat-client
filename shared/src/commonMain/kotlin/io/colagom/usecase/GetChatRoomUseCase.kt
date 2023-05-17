@@ -1,6 +1,6 @@
 package io.colagom.usecase
 
-import io.colagom.chat.dto.ChatRoom
+import io.colagom.chat.model.ChatRoom
 import io.colagom.chat.usecase.GetChatRoomUseCase
 import io.colagom.common.Http
 import io.ktor.client.call.body

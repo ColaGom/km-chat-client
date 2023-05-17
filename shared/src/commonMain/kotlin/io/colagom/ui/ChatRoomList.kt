@@ -34,7 +34,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import io.colagom.chat.dto.ChatRoom
+import io.colagom.chat.model.ChatRoom
 import io.colagom.common.PLATFORM
 import io.colagom.store.ChatRoomListAction
 import io.colagom.store.ChatRoomListEvent
