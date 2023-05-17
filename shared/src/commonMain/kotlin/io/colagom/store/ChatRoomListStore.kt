@@ -2,8 +2,7 @@ package io.colagom.store
 
 import io.colagom.chat.dto.ChatRoom
 import io.colagom.chat.dto.request.CreateChatRoom
-import io.colagom.usecase.CreateChatRoomUseCase
-import io.colagom.usecase.GetAllChatRoomUseCase
+import io.colagom.usecase.UseCases
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -54,7 +53,7 @@ class ChatRoomListStore(
     private fun refresh() {
         launch {
             _state.update {
-                it.copy(rooms = GetAllChatRoomUseCase().execute(Unit))
+                it.copy(rooms = UseCases.getAllChatRoom().execute(Unit))
             }
         }
     }
@@ -69,7 +68,8 @@ class ChatRoomListStore(
                     }
 
                     val event = runCatching {
-                        val room = CreateChatRoomUseCase().execute(CreateChatRoom(action.name, 10))
+                        val room =
+                            UseCases.createChatRoom().execute(CreateChatRoom(action.name, 10))
                         ChatRoomListEvent.CreateRoomSuccess(room)
                     }.getOrElse {
                         it.printStackTrace()

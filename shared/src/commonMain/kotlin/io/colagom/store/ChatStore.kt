@@ -5,7 +5,7 @@ import io.colagom.chat.dto.ChatRoom
 import io.colagom.chat.dto.request.ChatType
 import io.colagom.chat.dto.request.SendChat
 import io.colagom.common.Http
-import io.colagom.usecase.GetChatRoomUseCase
+import io.colagom.usecase.UseCases
 import io.ktor.client.plugins.websocket.ws
 import io.ktor.websocket.Frame
 import io.ktor.websocket.WebSocketSession
@@ -102,7 +102,7 @@ class ChatStore(
     private fun refresh() {
         launch {
             _state.update {
-                it.copy(room = GetChatRoomUseCase().execute(roomId))
+                it.copy(room = UseCases.getChatRoom().execute(roomId))
             }
         }
     }
